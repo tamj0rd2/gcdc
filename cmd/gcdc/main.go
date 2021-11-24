@@ -33,13 +33,11 @@ func main() {
 	for _, server := range spec.Servers {
 		baseUrl := server.URL
 
-		for pathName, path := range spec.Paths {
+		for pathName, _ := range spec.Paths {
 			err := testPath(baseUrl, pathName, router, httpClient)
 			if err != nil {
 				panic(err)
 			}
-
-			log.Printf("%+v", path)
 		}
 	}
 }

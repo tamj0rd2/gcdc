@@ -6,4 +6,4 @@ services:
       - "3000:3000"
     volumes:
       - .:/repo-root
-    entrypoint: node dist/index.js mock -p 3000 -h 0.0.0.0 /repo-root/lib/example.yml
+    entrypoint: node dist/index.js mock -p 3000 -h 0.0.0.0 /repo-root/lib/example-server.yml
